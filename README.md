@@ -1,59 +1,17 @@
-# CadastroCurriculoTeste
+# Formulário de Cadastro de Currículo
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.0.
+O projeto é um formulário de cadastro de currículo com implementações de validações, requisições para listar estados e cidades e trabaho com grupos dinâmicos de campos para o histórico profissional.
 
-## Development server
+O formulário possui etapas para cadastro de dados pessoais, dados profissionais, além de apresentar uma tela de resumo com todos os dados do formulário que permite o usuário revisar suas informações antes de fazer uma submissão.
 
-To start a local development server, run:
+## Execução da aplicação local
 
-```bash
-ng serve
-```
+Pré-requisito: certifique-se de que você tem instalado um gerenciador de pacotes Node.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Abra o terminal e navegue até o diretório raiz do projeto e instale as dependências com o comando `npm install` ou `npm i`.
 
-## Code scaffolding
+Depois, para iniciar o servidor de desenvolvimento local, rode o comando: `npm run start`.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Com o servidor sendo executado, abra o navegador em `http://localhost:4200/`. A aplicação irá recarregar automaaticamente sempre que você modificar qualquer um dos arquivos de origem.
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Se quiser parar o servidor, utilize `CTRL + c` e se precisar gerar os arquivos para produção, use o comando `npm run build`
