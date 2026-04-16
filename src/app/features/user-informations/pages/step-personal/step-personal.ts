@@ -5,10 +5,11 @@ import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { StatesAndCitiesApi } from '../../../../core/services/states-and-cities-api';
 import { rxResource, toSignal } from '@angular/core/rxjs-interop';
 import { tap } from 'rxjs';
+import { InputValidationDirective } from "../../../../shared/directives/input-validation-directive";
 
 @Component({
   selector: 'app-step-personal',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, InputValidationDirective],
   templateUrl: './step-personal.html',
 })
 export class StepPersonal {
