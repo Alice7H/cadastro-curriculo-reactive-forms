@@ -19,13 +19,8 @@ export class StepPersonal {
     return this.curriculumFormStore.personalFormGroup.get('state') as FormControl;
   }
 
-  stateSelected = toSignal<string>( this.stateControl!.valueChanges,{ initialValue: this.stateControl!.value || ''
+  selectedState = toSignal<string>( this.stateControl!.valueChanges,{ initialValue: this.stateControl!.value || ''
   });
-
-  testState = computed(() => {
-    console.log('Estado selecionado: ', this.stateSelected())
-    return '';
-  })
 
   statesResource = rxResource({
     params: () => true,
@@ -35,7 +30,22 @@ export class StepPersonal {
   statesList = computed(()=> {
     const ERROR_ON_RESPONSE = !!this.statesResource.error();
     if(ERROR_ON_RESPONSE) return [];
-    return this.statesResource.value() ?? [];
+    return this.statesResource.value();
+  })
+
+  citiesResource = rxResource({
+    params: () => {
+      const state = this.selectedState();
+      if(!state) return undefined;
+      return state;
+    },
+    stream: ({params}) => this._statesAndCitiesApi.getCities(params),
+  })
+
+  citiesList = computed(()=> {
+    const ERROR_ON_RESPONSE = !!this.citiesResource.error();
+    if(ERROR_ON_RESPONSE) return [];
+    return this.citiesResource.value();
   })
 
   goToProfessional(){
