@@ -16,4 +16,8 @@ export class CurriculumFormStore {
       maritalStatus: new FormControl('', [Validators.required]),
     }),
   });
+
+  get personalFormGroup(){
+    return this.curriculumForm.get('personal') as FormGroup;
+  }
 }
