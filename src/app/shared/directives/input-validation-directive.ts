@@ -16,17 +16,12 @@ export class InputValidationDirective {
   @Input() errorMessage = 'Campo inválido.';
 
   ngOnInit(){
-    console.log('onInit error message: ', this.errorMessage);
     this._ngControl.statusChanges?.pipe(takeUntilDestroyed(this._destroyRef))
-    .subscribe(()=> {
-      console.log('status mudou!');
-      this.updateStatus();
-    })
+    .subscribe(()=> this.updateStatus());
   }
 
   @HostListener('blur')
   onBlur(){
-    console.log('Ocorreu um blur');
     this.updateStatus();
   }
 
