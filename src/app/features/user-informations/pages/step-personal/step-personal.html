@@ -1,0 +1,149 @@
+<div class="space-y-6">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="col-span-1 md:col-span-2">
+      <label class="block text-sm font-medium text-zinc-300 mb-2">Nome Completo</label>
+      <input
+        type="text"
+        placeholder="Seu nome aqui"
+        class="w-full bg-zinc-950 border border-zinc-800 rounded-lg px-4 py-3 text-zinc-200 placeholder-zinc-600 focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500 transition-colors"
+      />
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium text-zinc-300 mb-2">E-mail</label>
+      <input
+        type="email"
+        placeholder="dev@rocketseat.com"
+        class="w-full bg-zinc-950 border border-zinc-800 rounded-lg px-4 py-3 text-zinc-200 placeholder-zinc-600 focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500 transition-colors"
+      />
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium text-zinc-300 mb-2">Idade</label>
+      <input
+        type="number"
+        placeholder="25"
+        class="w-full bg-zinc-950 border border-zinc-800 rounded-lg px-4 py-3 text-zinc-200 placeholder-zinc-600 focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500 transition-colors"
+      />
+    </div>
+
+    <div class="col-span-1 md:col-span-2">
+      <label class="block text-sm font-medium text-zinc-300 mb-2">Endereço</label>
+      <input
+        type="text"
+        placeholder="Rua, Número, Bairro"
+        class="w-full bg-zinc-950 border border-zinc-800 rounded-lg px-4 py-3 text-zinc-200 placeholder-zinc-600 focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500 transition-colors"
+      />
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium text-zinc-300 mb-2">Estado</label>
+      <div class="relative">
+        <select
+          class="w-full appearance-none bg-zinc-950 border border-zinc-800 rounded-lg px-4 py-3 text-zinc-200 focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500 transition-colors cursor-pointer"
+        >
+          <option disabled selected>Selecione</option>
+          <option>São Paulo</option>
+          <option>Rio de Janeiro</option>
+          <option>Minas Gerais</option>
+        </select>
+        <div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-zinc-500">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="m6 9 6 6 6-6" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium text-zinc-300 mb-2">Cidade</label>
+      <div class="relative">
+        <select
+          class="w-full appearance-none bg-zinc-950 border border-zinc-800 rounded-lg px-4 py-3 text-zinc-200 focus:outline-none focus:border-violet-500 focus:ring-1 focus:ring-violet-500 transition-colors cursor-pointer"
+        >
+          <option disabled selected>Selecione</option>
+          <option>Capital</option>
+          <option>Interior</option>
+        </select>
+        <div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-zinc-500">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="m6 9 6 6 6-6" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <label class="block text-sm font-medium text-zinc-300 mb-3">Estado Civil</label>
+    <div class="grid grid-cols-3 gap-3">
+      <label class="cursor-pointer group">
+        <input type="radio" name="civil" class="peer sr-only" />
+        <div
+          class="border border-zinc-800 bg-zinc-950 rounded-lg p-3 text-center text-sm text-zinc-400 peer-checked:border-violet-500 peer-checked:bg-violet-500/10 peer-checked:text-violet-300 transition-all group-hover:border-zinc-700"
+        >
+          Solteiro(a)
+        </div>
+      </label>
+      <label class="cursor-pointer group">
+        <input type="radio" name="civil" class="peer sr-only" />
+        <div
+          class="border border-zinc-800 bg-zinc-950 rounded-lg p-3 text-center text-sm text-zinc-400 peer-checked:border-violet-500 peer-checked:bg-violet-500/10 peer-checked:text-violet-300 transition-all group-hover:border-zinc-700"
+        >
+          Casado(a)
+        </div>
+      </label>
+      <label class="cursor-pointer group">
+        <input type="radio" name="civil" class="peer sr-only" />
+        <div
+          class="border border-zinc-800 bg-zinc-950 rounded-lg p-3 text-center text-sm text-zinc-400 peer-checked:border-violet-500 peer-checked:bg-violet-500/10 peer-checked:text-violet-300 transition-all group-hover:border-zinc-700"
+        >
+          Divorciado(a)
+        </div>
+      </label>
+    </div>
+  </div>
+
+  <div class="flex justify-end pt-6 border-t border-zinc-800 mt-4">
+    <button
+      routerLink="/professional"
+      class="bg-violet-600 hover:bg-violet-500 text-white px-6 py-3 rounded-lg font-bold text-sm tracking-wide transition-all flex items-center gap-2 shadow-lg shadow-violet-600/20 hover:shadow-violet-600/40 cursor-pointer"
+    >
+      PRÓXIMO PASSO
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M5 12h14" />
+        <path d="m12 5 7 7-7 7" />
+      </svg>
+    </button>
+  </div>
+</div>
